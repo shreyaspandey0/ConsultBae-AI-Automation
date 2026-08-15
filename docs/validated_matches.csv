@@ -1,0 +1,41 @@
+source_1,row_1,name_1,email_1,phone_1,source_2,row_2,name_2,email_2,phone_2,original_score,reasons,name_match,email_match,phone_match,decision,conflict_reason
+naukri,2,Tanvi Gupta,tanvi.gupta31@example.com,919000000254.0,cbnexus,22,Tanvi Gupta,,9000000254,95,"exact phone, exact name, same city",True,False,False,REVIEW,Conflicting phones
+naukri,5,Vikram Saxena,vikram.saxena60@example.com,9000000113.0,cbnexus,20,Vikram Saxena,,9000000113,95,"exact phone, exact name, same city",True,False,False,REVIEW,Conflicting phones
+naukri,5,Vikram Saxena,vikram.saxena60@example.com,9000000113.0,gig,9,Vikram Saxena,vikram.saxena60@example.com,,95,"exact email, exact name, same city",True,True,False,APPROVE,
+naukri,7,Sahil Malhotra,sahil.malhotra1@example.in,919000000143.0,cbnexus,9,SAHIL MALHOTRA,,9000000143,95,"exact phone, exact name, same city",True,False,False,REVIEW,Conflicting phones
+naukri,8,Shreya Gupta,shreya.gupta85@example.com,9000000227.0,cbnexus,10,Shreya Gupta,,+91-9000000227,95,"exact phone, exact name, same city",True,False,False,REVIEW,Conflicting phones
+naukri,9,Isha Chopra,isha.chopra95@mailtest.example.org,9000000138.0,cbnexus,18,Isha Chopra,,919000000138,95,"exact phone, exact name, same city",True,False,False,REVIEW,Conflicting phones
+naukri,9,Isha Chopra,isha.chopra95@mailtest.example.org,9000000138.0,gig,7,Isha Chopra,ISHA.CHOPRA95@MAILTEST.EXAMPLE.ORG,,95,"exact email, exact name, same city",True,True,False,APPROVE,
+naukri,39,Nikhil Mehta,nikhil.mehta5@example.com,9000000104.0,cbnexus,6,Nikhil Mehta,,+91-9000000104,95,"exact phone, exact name, same city",True,False,False,REVIEW,Conflicting phones
+naukri,43,Neha Bhatia,neha.bhatia60@mailtest.example.org,9000000273.0,cbnexus,27,Neha Bhatia,,9000000273,95,"exact phone, exact name, same city",True,False,False,REVIEW,Conflicting phones
+naukri,15,Karan Bhatia,karan.bhatia32@mailtest.example.org,919000000211.0,cbnexus,14,KARAN BHATIA,,9000000211,95,"exact phone, exact name, same city",True,False,False,REVIEW,Conflicting phones
+naukri,15,Karan Bhatia,karan.bhatia32@mailtest.example.org,919000000211.0,gig,4,Karan Bhatia,karan.bhatia32@mailtest.example.org,,95,"exact email, exact name, same city",True,True,False,APPROVE,
+naukri,16,Ritu Sharma,ritu.sharma23@mailtest.example.org,9000000146.0,cbnexus,3,RITU SHARMA,,9000000146,95,"exact phone, exact name, same city",True,False,False,REVIEW,Conflicting phones
+naukri,19,Varun Jain,varun.jain29@example.com,9000000263.0,cbnexus,12,Varun Jain,,919000000263,95,"exact phone, exact name, same city",True,False,False,REVIEW,Conflicting phones
+naukri,20,Arjun Mehta,arjun.mehta9@example.in,9000000131.0,cbnexus,5,Arjun Mehta,,+91-9000000131,95,"exact phone, exact name, same city",True,False,False,REVIEW,Conflicting phones
+naukri,17,Arjun Mishra,arjun.mishra70@example.com,9000000106.0,gig,5,Arjun Mishra,arjun.mishra70@example.com,,95,"exact email, exact name, same city",True,True,False,APPROVE,
+naukri,19,Varun Jain,varun.jain29@example.com,9000000263.0,gig,2,Varun Jain,varun.jain29@example.com,,95,"exact email, exact name, same city",True,True,False,APPROVE,
+naukri,23,Deepak Mehta,deepak.mehta86@example.in,9000000116.0,cbnexus,8,Deepak Mehta,,9000000116,95,"exact phone, exact name, same city",True,False,False,REVIEW,Conflicting phones
+naukri,30,Gaurav Mehta,gaurav.mehta79@mailtest.example.org,9000000133.0,cbnexus,26,Gaurav Mehta,,9000000133,95,"exact phone, exact name, same city",True,False,False,REVIEW,Conflicting phones
+naukri,34,Rahul Chopra,rahul.chopra70@example.com,9000000137.0,gig,10,Rahul Chopra,rahul.chopra70@example.com,,95,"exact email, exact name, same city",True,True,False,APPROVE,
+naukri,22,Sneha Chopra,sneha.chopra99@example.in,919000000162.0,cbnexus,24,Sneha Chopra,,+91-9000000162,95,"exact phone, exact name, same city",True,False,False,REVIEW,Conflicting phones
+naukri,22,Sneha Chopra,sneha.chopra99@example.in,919000000162.0,gig,14,Sneha Chopra,sneha.chopra99@example.in,,95,"exact email, exact name, same city",True,True,False,APPROVE,
+naukri,29,Varun Saxena,varun.saxena21@example.in,9000000170.0,gig,13,Varun Saxena,VARUN.SAXENA21@EXAMPLE.IN,,95,"exact email, exact name, same city",True,True,False,APPROVE,
+naukri,34,Rahul Chopra,rahul.chopra70@example.com,9000000137.0,cbnexus,21,Rahul Chopra,,9000000137,95,"exact phone, exact name, same city",True,False,False,REVIEW,Conflicting phones
+naukri,38,Tanvi Agarwal,tanvi.agarwal97@example.in,919000000148.0,gig,3,Tanvi Agarwal,tanvi.agarwal97@example.in,,95,"exact email, exact name, same city",True,True,False,APPROVE,
+naukri,38,Tanvi Agarwal,tanvi.agarwal97@example.in,919000000148.0,cbnexus,13,Tanvi Agarwal,,919000000148,95,"exact phone, exact name, same city",True,False,False,REVIEW,Conflicting phones
+naukri,43,Neha Bhatia,neha.bhatia60@mailtest.example.org,9000000273.0,gig,17,Neha Bhatia,NEHA.BHATIA60@MAILTEST.EXAMPLE.ORG,,95,"exact email, exact name, same city",True,True,False,APPROVE,
+naukri,40,Isha Kapoor,isha.kapoor54@example.com,919000000295.0,cbnexus,17,Isha Kapoor,,+91-9000000295,95,"exact phone, exact name, same city",True,False,False,REVIEW,Conflicting phones
+naukri,2,Tanvi Gupta,tanvi.gupta31@example.com,919000000254.0,gig,11,Tanvi Gupta,tanvi.gupta31@example.com,,85,"exact email, exact name",True,True,False,APPROVE,
+naukri,4,Priya Singh,priya.singh61@mailtest.example.org,9000000287.0,cbnexus,11,Priya Singh,,9000000287,85,"exact phone, exact name",True,False,False,REVIEW,Conflicting phones
+naukri,32,Rohit Nair,rohit.nair32@mailtest.example.org,919000000268.0,cbnexus,2,Rohit Nair,,9000000268,85,"exact phone, exact name",True,False,False,REVIEW,Conflicting phones
+naukri,30,Gaurav Mehta,gaurav.mehta79@mailtest.example.org,9000000133.0,gig,16,Gaurav Mehta,gaurav.mehta79@mailtest.example.org,,85,"exact email, exact name",True,True,False,APPROVE,
+naukri,29,Varun Saxena,varun.saxena21@example.in,9000000170.0,cbnexus,23,VARUN SAXENA,,919000000170,85,"exact phone, exact name",True,False,False,REVIEW,Conflicting phones
+naukri,33,Deepak Nair,deepak.nair44@example.com,9000000296.0,gig,15,Deepak Nair,DEEPAK.NAIR44@EXAMPLE.COM,,85,"exact email, exact name",True,True,False,APPROVE,
+naukri,33,Deepak Nair,deepak.nair44@example.com,9000000296.0,cbnexus,25,DEEPAK NAIR,,919000000296,85,"exact phone, exact name",True,False,False,REVIEW,Conflicting phones
+naukri,17,Arjun Mishra,arjun.mishra70@example.com,9000000106.0,cbnexus,15,Arjun Mishra,,919000000106,85,"exact phone, exact name",True,False,False,REVIEW,Conflicting phones
+naukri,18,Meera Bhatia,meera.bhatia52@mailtest.example.org,9000000223.0,gig,8,Meera Bhatia,meera.bhatia52@mailtest.example.org,,85,"exact email, exact name",True,True,False,APPROVE,
+naukri,12,Rahul Malhotra,rahul.malhotra69@mailtest.example.org,9000000260.0,cbnexus,7,RAHUL MALHOTRA,,919000000260,85,"exact phone, exact name",True,False,False,REVIEW,Conflicting phones
+naukri,28,Priya Saxena,priya.saxena61@example.com,919000000231.0,cbnexus,4,Priya Saxena,,919000000231,85,"exact phone, exact name",True,False,False,REVIEW,Conflicting phones
+naukri,18,Meera Bhatia,meera.bhatia52@mailtest.example.org,9000000223.0,cbnexus,19,MEERA BHATIA,,919000000223,85,"exact phone, exact name",True,False,False,REVIEW,Conflicting phones
+naukri,40,Isha Kapoor,isha.kapoor54@example.com,919000000295.0,gig,6,Isha Kapoor,isha.kapoor54@example.com,,85,"exact email, exact name",True,True,False,APPROVE,
