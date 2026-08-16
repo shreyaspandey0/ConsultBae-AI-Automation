@@ -149,3 +149,38 @@ ON data_quality_issues(source);
 
 CREATE INDEX IF NOT EXISTS idx_quality_type
 ON data_quality_issues(issue_type);
+
+-- =========================================================
+-- TASK 3: AUDIO SUBMISSIONS
+-- =========================================================
+
+CREATE TABLE IF NOT EXISTS audio_submissions (
+
+    submission_id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+    person_name TEXT NOT NULL,
+
+    phone TEXT NOT NULL,
+
+    audio_filename TEXT NOT NULL,
+
+    audio_path TEXT NOT NULL,
+
+    duration_seconds REAL,
+
+    sample_rate INTEGER,
+
+    bitrate INTEGER,
+
+    loudness_db REAL,
+
+    created_at TEXT DEFAULT CURRENT_TIMESTAMP
+);
+
+
+CREATE INDEX IF NOT EXISTS idx_audio_submissions_phone
+ON audio_submissions(phone);
+
+
+CREATE INDEX IF NOT EXISTS idx_audio_submissions_created
+ON audio_submissions(created_at);
