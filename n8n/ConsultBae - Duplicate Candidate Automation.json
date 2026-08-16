@@ -1,0 +1,243 @@
+{
+  "name": "ConsultBae - Duplicate Candidate Automation",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "candidate-csv",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "7329be3e-1138-4d37-97b3-05e71518570b",
+      "name": "Webhook",
+      "webhookId": "cab4ed59-0d90-45c3-a669-ce43bde76dbf"
+    },
+    {
+      "parameters": {
+        "url": "http://127.0.0.1:8000/persons/search",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "q",
+              "value": "={{ $json.body.email }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        208,
+        0
+      ],
+      "id": "a1411bb3-8ced-4522-9041-a303de9fa4ce",
+      "name": "HTTP Request",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "f45a10a6-55d8-498c-abf3-410b451f2591",
+              "leftValue": "={{ $json.person_id }}",
+              "rightValue": "P00013",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        416,
+        0
+      ],
+      "id": "8045e09f-a25b-4867-9553-862248fbf018",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "a88452fb-5037-48b1-bbbb-0e9b12773299",
+              "name": "alert_type",
+              "value": "duplicate_candidate",
+              "type": "string"
+            },
+            {
+              "id": "2fda3d19-cf68-46e8-b324-0d05b3369af6",
+              "name": "message",
+              "value": "Duplicate candidate detected",
+              "type": "string"
+            },
+            {
+              "id": "2ccca977-4925-4e50-80f1-591f2d7a581f",
+              "name": "person_id",
+              "value": "={{ $json.person_id }}",
+              "type": "string"
+            },
+            {
+              "id": "f0802134-5194-411d-ac32-d727a93043c3",
+              "name": "email",
+              "value": "={{ $json.canonical_email }}",
+              "type": "string"
+            },
+            {
+              "id": "a7ee1042-e14d-41aa-88e5-c81018280d8b",
+              "name": "candidate_name",
+              "value": "={{ $json.canonical_name }}",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        624,
+        -96
+      ],
+      "id": "63ca8623-ac17-4acf-bf0c-cbd1649be0bb",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "sendTo": "=shreyaspandey7376@gmail.com",
+        "subject": "Duplicate Candidate Detected",
+        "message": "=<p>Hello,</p>  <p>A duplicate candidate has been detected.</p>  <p> <strong>Candidate Name:</strong> {{ $json.candidate_name }}<br> <strong>Person ID:</strong> {{ $json.person_id }}<br> <strong>Email:</strong> {{ $json.email }} </p>  <p>Please review the candidate record before proceeding.</p>  <p>Regards,<br> ConsultBae Automation</p>",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        832,
+        -96
+      ],
+      "id": "4ac92a7e-37b5-4710-a01f-49b6f2a26e58",
+      "name": "Send a message",
+      "webhookId": "23540cdf-11fe-41e8-a39e-87a7b49f823f",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "dG5fA83U0KRLtnvb",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        939.211265684163,
+        -96
+      ],
+      "id": "f53b5c8d-bda4-41f6-b7e2-939eb42b1044",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        939.211265684163,
+        -96
+      ],
+      "id": "50c7e531-512c-4f94-926c-acc19799d91b",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        939.211265684163,
+        -96
+      ],
+      "id": "1f144104-4ca5-47a4-85e9-075ba49f108f",
+      "name": "Sticky Note2"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "c4259691-798d-4903-b5a0-1856c1cd55c8",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "88827616bac5f0cdff99a3a29663a8d6c37037e5ea372bfb9c66324212884e97"
+  },
+  "id": "mEstC5ROXsq4805p",
+  "tags": []
+}
