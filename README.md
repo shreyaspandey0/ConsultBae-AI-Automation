@@ -254,10 +254,13 @@ Additional project documentation:
 - **[Scalability Plan](docs/SCALABILITY_PLAN.md)**  
   Considerations for handling the system at a larger scale.
 
-- **Stuck / Debugging Log**  
-  Documents the major implementation issues encountered during development and how they were resolved.
+- **Stuck / Debugging Log**
 
----
+  During development, a few implementation issues were encountered and resolved:
+
+  - **Schema mismatch:** Fixed inconsistencies between the database schema and the application models/queries.
+  - **NumPy serialization:** Resolved serialization issues when returning NumPy-derived values through the API.
+  - **UTF-8 decoding:** Handled encoding issues while reading source data containing non-standard characters.
 
 ## Testing
 
