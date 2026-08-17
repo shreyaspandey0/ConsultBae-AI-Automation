@@ -46,15 +46,15 @@ ConsultBae-AI-Automation/
 ├── tests/          # Automated tests
 │
 └── README.md
-````
+```
 
 ## Data Sources
 
 The candidate data comes from three fictional sources provided for the assignment:
 
-* `source1_naukri_applicants.csv`
-* `source2_gig_workers.csv`
-* `source3_cbnexus_contacts.csv`
+- `source1_naukri_applicants.csv`
+- `source2_gig_workers.csv`
+- `source3_cbnexus_contacts.csv`
 
 The records were profiled and normalized before being consolidated.
 
@@ -62,11 +62,11 @@ The records were profiled and normalized before being consolidated.
 
 The source data contains issues such as:
 
-* Invalid email addresses
-* Missing email values
-* Invalid phone numbers
-* Missing or inconsistent candidate information
-* Cross-source matching and duplicate records
+- Invalid email addresses
+- Missing email values
+- Invalid phone numbers
+- Missing or inconsistent candidate information
+- Cross-source matching and duplicate records
 
 The detailed findings and handling decisions are documented here:
 
@@ -227,14 +227,14 @@ The workflow can then be executed using the webhook trigger.
 
 The FastAPI application provides endpoints for:
 
-* Database summary
-* Candidate search
-* Candidate/source information
-* Multi-source entity information
-* Data-quality issues
-* Data-quality summary
-* Audio submission
-* Audio submissions and playback
+- Database summary
+- Candidate search
+- Candidate/source information
+- Multi-source entity information
+- Data-quality issues
+- Data-quality summary
+- Audio submission
+- Audio submissions and playback
 
 API documentation is available at:
 
@@ -248,13 +248,13 @@ http://127.0.0.1:8000/docs
 
 Additional project documentation:
 
-* **[Data Quality Report](docs/DATA_QUALITY_REPORT.md)**
+- **[Data Quality Report](docs/DATA_QUALITY_REPORT.md)**  
   Data issues identified during profiling and how they were handled.
 
-* **[Scalability Plan](docs/SCALABILITY_PLAN.md)**
+- **[Scalability Plan](docs/SCALABILITY_PLAN.md)**  
   Considerations for handling the system at a larger scale.
 
-* **Stuck / Debugging Log**
+- **Stuck / Debugging Log**  
   Documents the major implementation issues encountered during development and how they were resolved.
 
 ---
@@ -269,23 +269,27 @@ tests/
 
 The goal was to verify the important paths rather than relying only on manual testing.
 
+---
 
 ## Key Takeaways
 
 This project brought together a few different parts of a real automation workflow:
 
-* Cleaning and consolidating messy candidate data
-* Resolving records across multiple sources
-* Exposing the data through an API
-* Automating duplicate-candidate alerts
-* Handling audio submissions and metadata
-* Tracking data-quality problems
-* Documenting debugging decisions
-* Planning for future scalability
+- Cleaning and consolidating messy candidate data
+- Resolving records across multiple sources
+- Exposing the data through an API
+- Automating duplicate-candidate alerts
+- Handling audio submissions and metadata
+- Tracking data-quality problems
+- Documenting debugging decisions
+- Planning for future scalability
 
 The main focus was not just building individual features, but getting the complete flow working together.
 
-## Repository 
+---
+
+## Repository
 
 GitHub:
-[https://github.com/shreyaspandey0/ConsultBae-AI-Automation](https://github.com/shreyaspandey0/ConsultBae-AI-Automation)
+
+https://github.com/shreyaspandey0/ConsultBae-AI-Automation
